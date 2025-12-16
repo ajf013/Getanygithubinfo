@@ -1,11 +1,28 @@
 .App-logo {
-    height: 150px;
-    pointer-events: none;
-  }
-  
-  .App-header {
-    height: 100%;
-    display: flex;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+  height: 150px;
+  pointer-events: none;
+}
+
+.App-header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px 0;
+}
+
+body.app-light {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+body.app-dark {
+  background-color: #1b1c1d;
+  color: #eee;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

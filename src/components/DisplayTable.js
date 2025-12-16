@@ -1,8 +1,11 @@
 import React from "react";
+import { useTheme } from "../contexts/ThemeContext";
 
 const DisplayTable = ({ data, repositories }) => {
+  const { theme } = useTheme();
+
   return (
-    <table className="ui celled table">
+    <table className={`ui celled stackable table ${theme === 'dark' ? 'inverted' : ''}`}>
       <thead>
         <tr>
           <th>Name</th>
@@ -14,7 +17,7 @@ const DisplayTable = ({ data, repositories }) => {
       </thead>
       <tbody>
         <tr>
-          <td>{data.name}</td>
+          <td>{data.name || data.login}</td>
           <td>
             {!data.avatar_url ? (
               " "
