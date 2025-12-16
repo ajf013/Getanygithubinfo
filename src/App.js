@@ -4,6 +4,7 @@ import "./App.css";
 import Profile from "./components/Profile";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <Profile />
+        <Footer />
       </div>
     </ThemeProvider>
   );
